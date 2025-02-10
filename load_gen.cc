@@ -45,11 +45,11 @@ long existing_point_query_count = 0;
 long non_existing_point_query_count = 0;
 long maximum_unique_non_existing_point_query_count = 0;
 long maximum_unique_existing_point_query_count = 0;
-uint32_t entry_size = 8; // in bytes // size of uint32_t = 4 bytes // range of uint32_t = 0 - 4294967295 (2^32 - 1)
+uint32_t entry_size = 64; // in bytes // size of uint32_t = 4 bytes // range of uint32_t = 0 - 4294967295 (2^32 - 1)
 uint32_t key_size = 4;
 float lambda = -1; // lambda = key_size / (key_size + value_size) ; key_size = entry_size * lambda ; value_size = entry_size * (1-lambda)
 bool load_from_existing_workload = false;
-std::string out_filename = "";
+std::string out_filename = "workload_insert_only.txt";
 
 const char value_alphanum[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; // "0123456789";
 
